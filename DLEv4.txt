@@ -1,4 +1,5 @@
-﻿InsPack = function (pack) {
+#Copy this code in an R console (v.4.2.1)
+InsPack = function (pack) {
   if(pack %in% rownames(installed.packages()) == FALSE) {
     print (paste("Instalando ",pack))
     install.packages(pack)}
@@ -29,7 +30,7 @@ ui <- fluidPage(
       sliderInput("s",
                   "Select the number of Simulations (s):",
                   min = 1,
-                  max = 1000,
+                  max = 1000, #change this number to obtain more precision in the simulated probability
                   value = 1,
                   step = 1),
     ),
